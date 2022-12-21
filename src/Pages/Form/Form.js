@@ -8,7 +8,7 @@ const Form = () => {
                     <td>
                     </td>
                     <td>
-                        <h1 className='text-3xl ml-10 mb-3'>Form Fill Up</h1>
+                        <h1 className='text-3xl font-semibold ml-10 mb-3'>Form Fill Up</h1>
                     </td>
                 </tr>
                 <tr>
