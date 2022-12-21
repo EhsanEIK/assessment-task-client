@@ -9,6 +9,7 @@ const Routers = () => {
     return (
         <Routes>
             <Route path='/' element={<Main />}>
+                <Route path='/' element={<Form />}></Route>
                 <Route path='/layout1' element={<Form />}></Route>
                 <Route path='/layout2' element={<Table />}></Route>
                 <Route path='/layout3' element={<CardLayout />}></Route>
