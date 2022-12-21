@@ -1,7 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
+import React, { useState } from 'react';
+import Loader from '../../components/Loader';
 
 const Table = () => {
+    const [loading, setLoading] = useState(true);
 
     // loaded users data
     const { data: users = [] } = useQuery({
@@ -9,9 +11,16 @@ const Table = () => {
         queryFn: async () => {
             const res = await fetch('https://assessment-app-server.vercel.app/users');
             const data = await res.json();
+            setLoading(false);
             return data;
         }
     })
+
+    if (loading) {
+        return <div className='mt-28 ml-[500px]'>
+            <Loader />
+        </div>
+    }
 
     return (
         <div className="overflow-x-auto mt-8">
