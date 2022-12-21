@@ -16,6 +16,7 @@ const Table = () => {
         }
     })
 
+    // loader
     if (loading) {
         return <div className='mt-28 ml-[500px]'>
             <Loader />
