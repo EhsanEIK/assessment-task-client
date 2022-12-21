@@ -2,6 +2,8 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 
 const Table = () => {
+
+    // loaded users data
     const { data: users = [] } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
